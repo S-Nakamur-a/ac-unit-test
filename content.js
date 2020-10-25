@@ -177,6 +177,19 @@ function createPyUnittest(io) {
 `import sys
 from io import StringIO
 import unittest
+import collections
+import itertools
+import math
+import fractions
+import functools
+
+
+def resolve():
+    pass
+
+
+if __name__ == "__main__":
+    resolve()
 
 
 class TestClass(unittest.TestCase):
@@ -187,7 +200,7 @@ class TestClass(unittest.TestCase):
         sys.stdout.seek(0)
         out = sys.stdout.read()[:-1]
         sys.stdout, sys.stdin = stdout, stdin
-        self.assertEqual(out, output)
+        self.assertEqual(output, out)
 
 `;
   
@@ -200,11 +213,6 @@ class TestClass(unittest.TestCase):
 
 `;
   }
-
-  text += `
-if __name__ == "__main__":
-    unittest.main()
-`;
   
   return text;
 }
