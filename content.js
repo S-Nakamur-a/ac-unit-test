@@ -185,7 +185,7 @@ import functools
 
 
 def resolve():
-    pass
+    input = lambda: sys.stdin.readline().strip()
 
 
 if __name__ == "__main__":

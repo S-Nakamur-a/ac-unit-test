@@ -6,7 +6,7 @@ function saveOptions() {
 
 function restoreOptions() {
   chrome.storage.sync.get({
-    language: 'Java',
+    language: 'Python3',
   }, function(items) {
     document.getElementById("language").value = items.language;
   });
